@@ -1,13 +1,18 @@
-.textBuy {
-  font-size: 22px;
-  font-family: Arial, Helvetica, sans-serif;
-  color: #ff4043;
-}
+/* Error: Undefined mixin.
+ *   ,
+ * 4 |     @include text-style($primary-color, 22px, Arial)
+ *   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ *   '
+ *   sass/pages/home.scss 4:5  @import
+ *   sass/style.scss 5:9       root stylesheet */
 
-.btn {
-  padding: 10px 15px;
-  border: 1px solid red;
-  background-color: #ff4;
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: Undefined mixin.\a   \2577 \a 4 \2502      @include text-style($primary-color, 22px, Arial)\d\a   \2502      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\a   \2575 \a   sass/pages/home.scss 4:5  @import\a   sass/style.scss 5:9       root stylesheet";
 }
-
-/*# sourceMappingURL=style.css.map */
